@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Profile Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand">GitHub Profile Viewer</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#search">Search User</a></li>
+                <li><a href="#bookmarks">Bookmarks</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="main" id="home">
+        <div class="firstDiv">
+            <h1>Github Profile Viewer</h1>
+            <div>
+                <input type="text" id="userID" placeholder="Enter GitHub Username">
+                <button id="btn">Search</button>
+            </div>
+            <div class="themeToggle">
+                <label for="themeSwitch">Toggle Theme:</label>
+                <input type="checkbox" id="themeSwitch">
+                <span id="themeStatus">Light Mode</span>
+            </div>
+            <button id="deleteHistory">Delete History</button>
+        </div>
+        <div class="secondDiv" id="userProfile">
+            <h1>Search User</h1>
+        </div>
+        <div class="searchHistory">
+            <h2>Search History</h2>
+            <ul id="historyList"></ul>
+        </div>
+        <div class="repoOverview">
+            <h2>Repositories</h2>
+            <label for="sortRepo">Sort By:</label>
+            <select id="sortRepo">
+                <option value="stargazers_count">Stars</option>
+                <option value="forks_count">Forks</option>
+                <option value="created_at">Creation Date</option>
+            </select>
+            <ul id="repoList"></ul>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
